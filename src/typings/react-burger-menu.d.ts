@@ -1,0 +1,1 @@
+declare module 'react-burger-menu'; // used to resolve typescript error/warning
