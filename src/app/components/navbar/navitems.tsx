@@ -1,10 +1,12 @@
-import React from 'react';
 import styled, {css} from 'styled-components';
 import tw from 'twin.macro';
 import { slide as Menu } from 'react-burger-menu';
 import { useMediaQuery } from 'react-responsive';
 import { SCREENS } from '../responsive';
 import menuStyle from './menuStyles';
+import {
+    Link
+  } from 'react-router-dom';
 
 const ListContainer = styled.ul`
     ${tw`
@@ -52,10 +54,10 @@ export function NavItems() {
         return <Menu right styles={menuStyle}>
                 <ListContainer>
                     <NavItem menu>
-                        <a href='#'>Home</a>
+                        <Link to='/'>Home</Link>
                     </NavItem>
                     <NavItem menu>
-                        <a href='#'>About</a>
+                        <Link to='/about'>About</Link>
                     </NavItem>
                     <NavItem menu>
                         <a href='#'>Explore</a>
@@ -69,10 +71,10 @@ export function NavItems() {
 
     return <ListContainer>
             <NavItem>
-                <a href='#'>Home</a>
+                <Link to='/'>Home</Link>
             </NavItem>
             <NavItem>
-                <a href='#'>About</a>
+                <Link to='/about'>About</Link>
             </NavItem>
             <NavItem>
                 <a href='#'>Explore</a>
